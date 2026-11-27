@@ -3,6 +3,7 @@ package com.nagarbondhu.repository;
 import com.nagarbondhu.entity.Complaint;
 import com.nagarbondhu.entity.enums.ComplaintStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import java.util.Collection;
 import java.util.List;
@@ -18,4 +19,7 @@ public interface ComplaintRepository extends JpaRepository<Complaint, Long> {
     List<Complaint> findAllByOrderByCreatedAtDesc();
 
     long countByStatus(ComplaintStatus status);
+
+    @Query("SELECT c.trackingNo FROM Complaint c")
+    List<String> findAllTrackingNumbers();
 }
