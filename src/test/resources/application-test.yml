@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: ${TEST_DB_URL:jdbc:postgresql://localhost:5432/nagarbondhu_test}
+    username: ${TEST_DB_USERNAME:nagarbondhu_user}
+    password: ${TEST_DB_PASSWORD:nagarbondhu_pass}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+
+app:
+  jwt:
+    secret: TestSecretKeyForNagarBondhuIntegrationTests2026Secure!
+    expiration-ms: 900000
+    refresh-expiration-ms: 604800000
+  upload-dir: ./target/test-uploads

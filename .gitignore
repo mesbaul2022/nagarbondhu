@@ -1,0 +1,21 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### Environment & Uploads ###
+.env
+uploads/
+
+### Local Agent Planning Files (Never Commit) ###
+.antigravity/
+
+### IDE & OS ###
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+.DS_Store
+Thumbs.db
